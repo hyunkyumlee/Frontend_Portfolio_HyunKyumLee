@@ -1,0 +1,255 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 추가할 리셋 내용 */
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+/* ----------------------------서식------------------------------------ */
+@font-face{
+            font-family: 'PanterA';
+            src: url(../fonts/PanterA/PanterA.ttf);
+        }
+@font-face{
+    font-family: 'DancingScript';
+    src: url(../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+        h1{
+    font-family: PanterA;
+    font-size: 210px;
+    text-shadow: 5px 5px 5px gray;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h1 strong{
+    font-size: 300px;
+}
+/* -------------------------------Welcome--------------------------------- */
+header{
+    text-align: center;
+}
+.welcome_img{
+    width: 100%;
+    height: 600px;
+    margin-bottom: 100px;
+    background: url(../images/wp2949843-pantera-band-wallpaper.jpg) no-repeat fixed;
+    background-size: cover;
+}
+/* ------------------------------내비 바----------------------------------- */
+nav{
+    border: 2px solid #aaa;
+    width: 600px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 400px;
+    border-radius: 50px;
+    position: sticky;
+    top: 5px;
+    background-color: white;
+    opacity: 0.6;
+}
+.nav_ul{
+    display: flex;
+    justify-content: space-around;
+    line-height: 55px;
+}
+.nav_ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    color: #555;
+}
+/* -------------------------------About-------------------------------------- */
+.about{
+    /* border: 1px solid red; */
+    margin: 100px 200px;
+    text-align: center;
+}
+.about p{
+    font-size: 34px;
+    line-height: 40px;
+}
+.about p b{
+    font-weight: 600;
+}
+.about img{
+    margin-bottom: 80px;
+}
+/* -----------------------------------Skills------------------------------------------- */
+.skills{
+    /* border: 1px solid red; */
+    margin: 100px 200px;
+}
+.skills h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.skills ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    justify-content: center;
+}
+.skills ul li{
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+.skills ul li img{
+    width: 20px;
+    height: auto;
+    flex-shrink: 0;      /* ★핵심: 공간이 부족해도 이미지가 찌그러지지 않게 방지 */
+    object-fit: contain
+}
+/* ------------------------------Introducing---------------------------------------- */
+.Icons_text{
+    /* border: 1px solid red; */
+    text-align: center;
+    margin-top: 600px;
+}
+.Icons_text h2{
+    font-family: 'DancingScript';
+    font-size: 120px;
+}  
+input[name='tab-group']{
+            display: none;
+        }
+.tab-button{
+            display: inline-block;
+            width: 150px;
+            height: 40px;
+            padding: 10px 0;
+            text-align: center;
+            cursor: pointer;
+            background-color: #eee;
+            color: #777;
+            border: 2px solid #ccc;
+            font-weight: 600;
+            border-radius: 13px;
+            z-index: 0;
+            position: relative;
+            margin-bottom: 25px;
+        }
+.intro{
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 1400px;
+    position: relative;
+    background-color: #555;
+    padding: 20px;
+    border-radius: 20px;
+}
+.intro img{
+    height: 600px;
+}
+#intro1{
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+#intro2{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 50px;
+    visibility: hidden;
+    margin-right: 30px;
+}
+.intro_text1{
+    text-align: center;
+    width: 100%;
+    margin: 5%;
+    font-size: 24px;
+    font-weight: 250;
+    line-height: 35px;
+    top: 50%;
+    color: white;
+}
+.intro_text2{
+    text-align: center;
+    width: 100%;
+    margin: 5%;
+    font-size: 24px;
+    font-weight: 250;
+    line-height: 35px;
+    top: 50%;
+    color: white;
+}
+input#tab1:checked + label,
+input#tab2:checked + label{
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+#tab1:checked ~ #intro1,
+#tab2:checked ~ #intro2{
+    visibility: visible;
+    animation: radio 0.9s ease-out;
+}
+@keyframes radio {
+    from{
+        opacity: 0;
+    }to{
+
+    }
+}
+
