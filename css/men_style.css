@@ -409,19 +409,19 @@ footer {
   height: 400px;
 }
 .image1 {
-  background-image: url(./images/main1.jpg);
+  background-image: url(../images/main1.jpg);
 }
 .image2 {
-  background-image: url(./images/main4.jpg);
+  background-image: url(../images/main4.jpg);
 }
 .image3 {
-  background-image: url(./images/Cockpit_USA_40th_Anniversary_A-2_Flight_Jacket_Brown_USA_Made1__25185.jpg);
+  background-image: url(../images/Cockpit_USA_40th_Anniversary_A-2_Flight_Jacket_Brown_USA_Made1__25185.jpg);
 }
 .image4 {
-  background-image: url(./images/s-l1200.jpg);
+  background-image: url(../images/s-l1200.jpg);
 }
 .image5 {
-  background-image: url(./images/TP201.webp);
+  background-image: url(../images/TP201.webp);
 }
 
 /* -------------------------반응형 웹(작을 때)------------------------------------ */
