@@ -409,7 +409,7 @@ footer {
   height: 400px;
 }
 .image1 {
-  background-image: url(/images/main1.jpg);
+  background-image: url(../images/main1.jpg);
 }
 .image2 {
   background-image: url(/images/main4.jpg);
