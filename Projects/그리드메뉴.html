@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+      .parents {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        grid-auto-rows: 400px;
+        grid-gap: 20px 20px;
+      }
+      .parents > div {
+        border: 1px solid lightgray;
+        padding: 10px;
+        font-weight: 700;
+        background-color: white;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        background-position: center;
+      }
+      section {
+        /* border: 1px solid red; */
+        height: 300px;
+        margin: 10px;
+      }
+      small {
+        font-weight: 400;
+      }
+      body {
+        padding: 10px;
+      }
+      
+      h1,
+      h2,
+      h3 {
+        text-align: center;
+      }
+      .background {
+        background-image: url(./images/pantera.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      h1, h2 {
+        font-size: 70px;
+        color: black;
+        margin-top: 300px;
+      }
+      .pantera {
+        background-image: url(./images/pantera2.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-attachment: scroll;
+      }
+      .topbtn{
+        list-style: none;
+        text-align: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: darkgray;
+        font-size: 30px;
+      }
+      a:hover{
+        color: white;
+        cursor:pointer;
+      }
+     
+
+    </style>
+  </head>
+  <header>
+    <ul class="topbtn" id="topbtn">
+        <li><a href="#pantera">Pantera</a></li>
+    </ul>
+  </header>
+  <body class="background">
+    <h2>Acorn Music</h2>
+    <div class="parents">
+      <div class="box box1">
+        Fender Stratocaster Black
+        <section>
+          <img src="./images/guitar1.webp" alt="" />
+        </section>
+        <small> 가장 기본적인 스트라토캐스터. </small>
+      </div>
+      <div class="box box2">
+        Fender Stratocaster Candy Red
+        <section>
+          <img src="./images/guitar2.webp" alt="" />
+        </section>
+        <small> 캔디 애플의 강렬한 색상 </small>
+      </div>
+      <div class="box box3">
+        Shur Sunburst SuperStrat
+        <section>
+          <img src="./images/guitar3.jpg" alt="" />
+        </section>
+        <small> Sunburst 슈퍼스트랫으로 강렬함을 뽐내보세요. </small>
+      </div>
+      <div class="box box4">
+        Gibson Les Paul P90
+        <section>
+          <img src="./images/guitar4.webp" alt="" />
+        </section>
+        <small> P90의 따뜻한 음색. </small>
+      </div>
+      <div class="box box5">
+        Fender Stratocaster Cory Wong Special
+        <section>
+          <img src="./images/guitar5.webp" alt="" />
+        </section>
+        <small> Cory Wong의 컬렉션을 만나보세요. </small>
+      </div>
+      <div class="box box6">
+        LTD Flying V RazorBack
+        <section>
+          <img src="./images/guitar6.jpg" alt="" />
+        </section>
+        <small> EMG 픽업의 귀를 찢는 사운드. </small>
+      </div>
+      <div class="box box7">
+        Gibson SG Standard
+        <section>
+          <img src="./images/guitar7.webp" alt="" />
+        </section>
+        <small> 가벼움의 정수를 만나보세요. </small>
+      </div>
+      <div class="box box8">
+        ESP Les Paul Kirk Hammet Edition
+        <section>
+          <img src="./images/guitar8.webp" alt="" />
+        </section>
+        <small> 우리에게 너무 친숙한 사운드. </small>
+      </div>
+      <div class="box box9">
+        Fender USA Stratocaster 1963 Reissue
+        <section>
+          <img src="./images/guitar9.jpg" alt="" />
+        </section>
+        <small> 빈티지함의 끝판왕 </small>
+      </div>
+      <div class="box box10">
+        Ibanez Gio
+        <section>
+          <img src="./images/guitar10.webp" alt="" />
+        </section>
+        <small> 말도 안 되는 가성비. </small>
+      </div>
+    </div>
+  </body>
+  <div class="scroll">
+    <h1>About Pantera</h1>
+      <section class="pantera" id="pantera"></section>
+  </div>
+  <h3><a href="#topbtn" class="top">맨 위로</a></h3>
+</html>

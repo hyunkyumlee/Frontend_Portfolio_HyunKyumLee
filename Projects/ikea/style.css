@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 헤더 부분 시작 */
+header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: gray;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav a{
+    padding: 15px;
+}
+a:hover{
+    color: #01a1dd;
+    background-color: aliceblue;
+}
+.logo{
+    margin-left: 30px;
+}
+.logo img{
+    width: 60px;
+}
+/* 메인 부분 시작 */
+main{
+    background-image: url(../images/a48c957ef2a49.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    margin-bottom: 30px;
+}
+.ment1{
+    position: relative;
+    top: 300px;
+    left: 45px;
+    font-size: 1em; /*기본 16px=1em*/
+    color: rgb(207, 207, 207);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ment2{
+    position: relative;
+    top: 295px;
+    left: 45px;
+    font-size: 3em;
+    color: rgb(251, 255, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    position: relative;
+    top: 300px;
+    left: 45px;
+    background-color: #01a1dd;
+    border: 0;
+    padding: 5px 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+/* 푸터 부분 시작 */
+footer{
+    color: gray;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    padding: 10px 50px;
+}
+footer a img{
+    width: 20px;
+}
+.fa-brands{
+    font-size: 20px;
+}
