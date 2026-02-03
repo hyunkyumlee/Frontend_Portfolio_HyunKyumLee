@@ -3,34 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome</title>
+    <title>HyunK's Portfolio</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
+  
     <header>
       <div class="welcome_img"></div>
-      <h1>Welcome <strong>2</strong></h1>
-      <h1>HyunK's Portfolio</h1>
+      <h1>welcome <strong>2</strong> hyunk's</h1>
+      <h1 class="portfolio">Portfoli<span class="flip-last">O</span></h1>
     </header>
-    <nav>
-        <ul class="nav_ul">
-          <li><a href="#">WELCOME</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">PROJECT</a></li>
-        </ul>
-        <div>
-          <!-- 내비바 안쪽의 슬라이더 -->
-        </div>
-      </nav>
+   <nav>
+      <div class="slider">
+        <!-- 내비바 안쪽의 슬라이더 -->
+      </div>
+      <ul class="nav_ul">
+        <li><a href="#">WELCOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+      </ul>
+    </nav>
     <main>
       <section class="about">
         <img
           class="about_img"
           src="../Frontend_Portfolio_HyunKyumLee/images/tumblr_8fc2301a998e83971d26843883deb58c_6b922d82_400.webp"
           alt=""
+          id="about"
         />
         <p>
-          안녕하세요, 집요하기는 기가막힌 <br />
+          안녕하세요, 집요하게 파고드는 <br />
           <b>메탈 좋아하는 개발자 이현겸</b>입니다.
         </p>
       </section>
@@ -59,15 +62,15 @@
           </li>
         </ul>
         <div class="Icons_text">
-            <h2>Icons of My Inspiration</h2>
+          <h2>Icons of My Inspiration</h2>
         </div>
       </section>
       <section class="intro">
-        <input type="radio" name="tab-group" id="tab1" checked>
-         <label for="tab1" class="tab-button">Mentor</label>
+        <input type="radio" name="tab-group" id="tab1" checked />
+        <label for="tab1" class="tab-button">Mentor</label>
 
-         <input type="radio" name="tab-group" id="tab2">
-         <label for="tab2" class="tab-button">Musical Mentor</label>
+        <input type="radio" name="tab-group" id="tab2" />
+        <label for="tab2" class="tab-button">Musical Mentor</label>
         <div id="intro1" class="tab-content">
           <img src="./images/chris.webp" alt="" />
           <div class="intro_text1">
@@ -82,15 +85,69 @@
         <div id="intro2" class="tab-content">
           <div class="intro_text2">
             <p>
-              음악적 멘토는 다임백 대럴입니다. Pantera의 주축 멤버였던 기타리스트로,
-              2004년에 세상을 떠났지만 그의 대인배스러운 성품과 면도날 같이 날카로운
-              기타 연주는 여전히 저에게 귀감이 되어 주고 있습니다.
+              음악적 멘토는 다임백 대럴입니다. Pantera의 주축 멤버였던
+              기타리스트로, 2004년에 세상을 떠났지만 그의 대인배스러운 성품과
+              면도날 같이 날카로운 기타 연주는 여전히 저에게 귀감이 되어 주고
+              있습니다.
             </p>
           </div>
-        <img src="./images/dimebag.jpg" alt="" />
+          <img src="./images/dimebag.jpg" alt="" />
         </div>
       </section>
     </main>
-    <footer></footer>
+    <aside id="projects">
+      <h2>Projects</h2>
+      <section class="projects_wrapper">
+        <div class="box box1">
+          <a href="../2주차/0126/그리드메뉴.html" target="_blank">
+            <img src="./images/pj_images/그리드메뉴.png" alt="" />
+            <h3>Grid Menu</h3>
+          </a>
+        </div>
+        <div class="box box2">
+          <a href="../2주차/0127/블루보틀.html" target="_blank">
+            <img src="./images/pj_images/이케아.png" alt="" />
+            <h3>Ikea</h3>
+          </a>
+        </div>
+        <div class="box box3">
+          <a href="../2주차/0129/website_pj_github/NEWS.html" target="_blank">
+            <img src="./images/pj_images/men.png" alt="" />
+            <h3>Men Noblesse 홈페이지</h3>
+          </a>
+        </div>
+        <div class="box box4">
+          <a href="../2주차/0130/MobileFirst/index.html" target="_blank">
+            <img src="./images/pj_images/mobileFirst.png" alt="" />
+            <h3>Mobile First</h3>
+          </a>
+        </div>
+        <div class="box box5">
+          <a href="../3주차/0202/tabBtn/index.html">
+            <img src="./images/pj_images/starbucks.png" alt="" />
+            <h3>Starbucks</h3>
+          </a>
+        </div>
+      </section>
+    </aside>
+    <footer>
+      <div>
+        <h2>Contact</h2>
+      </div>
+      <div class="contact">
+      <ul>
+        <li>
+          <img src="./images/email-envelope-line-white-icon.webp" alt="" />
+          <p>hg102938363736@gmail.com</p>
+        </li>
+        <li>
+          <a href="https://github.com/hyunkyumlee" target="_blank">
+           <img src="./images/github_logo.png" alt="" />
+           <p>https://github.com/hyunkyumlee</p>
+          </a>
+        </li>
+      </ul>
+      </div>
+    </footer>
   </body>
 </html>
