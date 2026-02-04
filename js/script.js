@@ -68,7 +68,8 @@ window.addEventListener("scroll", function() {
 
 const songs = [
   { title: "Meshuggah - Bleed", audio: "./Bleed.mp3", cover: "./images/obzen_cover.jpg" },
-  { title: "Meshuggah - Swarm", audio: "./Swarm.mp3", cover: "./images/koloss.jpg" }
+  { title: "Meshuggah - Swarm", audio: "./Swarm.mp3", cover: "./images/koloss.jpg" },
+  { title: "Renai Circulation", audio: "./Renai Circulation.", cover: "./images/renai.jpg" }
 ];
 
 let songIndex = 0; // 현재 재생 중인 노래 번호 (0부터 시작)
