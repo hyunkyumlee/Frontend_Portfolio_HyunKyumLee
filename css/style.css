@@ -144,7 +144,7 @@ table {
 }
 @font-face {
   font-family: "Metallica";
-  src: url(../fonts/Metallica-Font/Pastor\ of\ Muppets.TTF);
+  src: url(../fonts/metal-gothic-font/MetalGothicDemoVersionRegular-WyB9A.ttf);
 }
 @font-face {
   font-family: "Lobster";
@@ -160,15 +160,16 @@ table {
 }
 h1 {
   font-family: Metallica;
-  font-size: 190px;
-  text-shadow: 5px 5px 0px gray;
+  font-size: 140px;
+  font-weight: 100;
+  text-shadow: 5px 5px 2px gray;
 }
 a {
   text-decoration: none;
   color: black;
 }
 h1 strong {
-  font-size: 350px;
+  font-size: 200px;
 }
 .portfolio {
   font-size: 270px;
@@ -178,6 +179,7 @@ h1 strong {
   display: inline-block; /* 회전/반전을 위해 필수 */
   transform: scaleX(-1); /* 좌우 반전 */
   text-shadow: -10px 10px 0px gray;
+  font-weight: 100;
   /* 만약 상하좌우 모두 뒤집고 싶다면 transform: rotate(180deg); */
 }
 /* -------------------------------Welcome--------------------------------- */
@@ -198,23 +200,23 @@ header {
 
 .music_ctrl{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 25px;
   position: relative;
   border: 1px solid rgb(0, 0, 0);
   background-color: rgb(27, 27, 27);
   border-radius: 10px;
-  width: 500px;
+  width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
   box-shadow: 0px 0px 10px 3px #222;
   margin-bottom: 200px;
 }
 .btn-group{
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   margin-top: 20px;
 }
 .btn-group button{
@@ -247,49 +249,47 @@ header {
   transition: 0.3s ease-out;
   box-shadow: 10px 10px 15px #000000;
 }
-.music_ctrl::after {
-  content: '';
-  position: absolute;
-  
-  top: 170px; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  /* 구멍의 크기와 모양 */
-  width: 90px;
-  height: 90px;
-  background-color: #ad0b0b;
-  border-radius: 50%;
-  
-  border: 3px solid #222;
-  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
-  
-  z-index: 5;
+
+.album-wrapper {
+  position: relative; /* 자식인 vinyl과 구멍의 기준점 */
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0; /* flex 안에서 크기 고정 */
 }
-.album-image {
-  width: 300px;
-  height: 300px;
+.album-image, .vinyl-image {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  border: 3px solid #333;
+  position: absolute; /* 두 이미지를 겹침 */
+  top: 0;
+  left: 0;
   object-fit: cover;
-  position: relative;
-  
   animation: rotate_image 5s linear infinite;
-  
   animation-play-state: paused;
 }
 .vinyl-image {
-  position: absolute;
+  z-index: 2;
+  pointer-events: none; /* 클릭 방해 금지 */
   opacity: 0.3;
-  width: 300px;
-  height: 300px;
+}
+
+/* 재생 중일 때 둘 다 회전 */
+.playing {
+  animation-play-state: running !important;
+}
+.album-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%; /* wrapper의 정중앙 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px; /* 이미지 크기에 맞춰 조절 */
+  height: 60px;
+  background-color: #ad0b0b;
   border-radius: 50%;
-  border: 3px solid #333;
-  object-fit: cover;
-  
-  animation: rotate_image 5s linear infinite;
-  
-  animation-play-state: paused;
+  border: 2px solid #222;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
+  z-index: 5;
 }
 
 /* 회전 애니메이션 */
@@ -701,12 +701,16 @@ footer h2 {
   transition: 0.2s ease-out;
   font-family: Metallica;
 }
+.btn-group{
+  gap: 8px;
+}
 
   h1 {
     font-size: 100px;
+    text-shadow: 3px 3px 2px gray;
   }
   h1 strong {
-    font-size: 230px;
+    font-size: 150px;
   }
   .portfolio {
     font-size: 180px;
