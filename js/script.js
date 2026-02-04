@@ -10,12 +10,12 @@ window.addEventListener("scroll", function() {
     let portfolioTime, iconsTime, aboutTime, projectsTime;
 
     if (width <= 880) { 
-        portfolioTime = 1;  
+        portfolioTime = 450;  
         iconsTime = 1500;     
         aboutTime = 600;      
         projectsTime = 2500;  
     } else {
-        portfolioTime = 400;  
+        portfolioTime = 800;  
         iconsTime = 2100;     
         aboutTime = 1000;     
         projectsTime = 3900;  
@@ -25,13 +25,13 @@ window.addEventListener("scroll", function() {
     if (value < portfolioTime) {
         pick.style.animation = 'portfolio_unPick 0.5s ease-out forwards';
     } else {
-        pick.style.animation = 'portfolio_pick 0.5s ease-out forwards';
+        pick.style.animation = 'portfolio_pick 1s ease-in-out forwards';
     }
 
     if (value < iconsTime) {
         icons.style.animation = 'Icons_unPick 0.5s ease-out forwards';
     } else {
-        icons.style.animation = 'Icons_pick 1s ease-in-out forwards';
+        icons.style.animation = 'Icons_pick 0.7s ease-in-out forwards';
     }
 
     // 2. 현재 위치 판별
@@ -64,4 +64,25 @@ window.addEventListener("scroll", function() {
         else if (currentPos === "pos-about" && index === 1) link.style.color = "white";
         else if (currentPos === "pos-welcome" && index === 0) link.style.color = "white";
     });
+});
+
+const music = document.getElementById("myAudio");
+const albumArt = document.getElementById("albumArt");
+const playBtn = document.getElementById("playBtn"); // 버튼 요소 가져오기
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+    albumArt.classList.add("playing"); // 회전 시작
+    playBtn.innerText = "일시정지";   // 버튼 글자 변경
+  } else {
+    music.pause();
+    albumArt.classList.remove("playing"); // 회전 멈춤
+    playBtn.innerText = "재생";        // 버튼 글자 변경
+  }
+}
+// 음악이 끝났을 때 실행되는 이벤트
+music.addEventListener('ended', () => {
+  albumArt.classList.remove("playing");
+  playBtn.innerText = "재생";
 });
