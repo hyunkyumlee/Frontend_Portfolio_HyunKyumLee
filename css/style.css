@@ -211,12 +211,18 @@ header {
   box-shadow: 0px 0px 10px 3px #222;
   margin-bottom: 200px;
 }
-#playBtn{
+.btn-group{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.btn-group button{
   background: radial-gradient(circle at 80% 40%, #eee, #aaa, #222);
   color: white;
   text-shadow: 2px 2px 2px black;
   font-size: 20px;
-  width: 150px;
+  width: 120px;
   height: 50px;
   line-height: 50%;
   border-radius: 25px;
@@ -225,6 +231,16 @@ header {
   border: 1px solid #444;
   box-shadow: 5px 5px 5px #030303;
   transition: 0.2s ease-out;
+}
+.song-title{
+  font-size: 24px;
+  color: white;
+  font-weight: 600;
+}
+.side-btn:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease-out;
+  box-shadow: 10px 10px 15px #000000;
 }
 #playBtn:hover{
   transform: scale(1.1);

@@ -66,23 +66,56 @@ window.addEventListener("scroll", function() {
     });
 });
 
+const songs = [
+  { title: "Meshuggah - Bleed", audio: "./Bleed.mp3", cover: "./images/obzen_cover.jpg" },
+  { title: "Meshuggah - Swarm", audio: "./Swarm.mp3", cover: "./images/koloss.jpg" }
+];
+
+let songIndex = 0; // 현재 재생 중인 노래 번호 (0부터 시작)
+
 const music = document.getElementById("myAudio");
 const albumArt = document.getElementById("albumArt");
-const playBtn = document.getElementById("playBtn"); // 버튼 요소 가져오기
+const songTitle = document.querySelector("h3");
+const playBtn = document.getElementById("playBtn");
 
-function toggleMusic() {
-  if (music.paused) {
-    music.play();
-    albumArt.classList.add("playing"); // 회전 시작
-    playBtn.innerText = "일시정지";   // 버튼 글자 변경
-  } else {
-    music.pause();
-    albumArt.classList.remove("playing"); // 회전 멈춤
-    playBtn.innerText = "재생";        // 버튼 글자 변경
-  }
+// 2. 노래 로드 함수
+function loadSong(song) {
+  songTitle.innerText = song.title;
+  music.src = song.audio;
+  albumArt.src = song.cover;
 }
-// 음악이 끝났을 때 실행되는 이벤트
-music.addEventListener('ended', () => {
+
+// 3. 이전 곡으로 이동
+function prevSong() {
+  songIndex--;
+  if (songIndex < 0) songIndex = songs.length - 1; // 처음이면 마지막 곡으로
+  loadSong(songs[songIndex]);
+  playMusic();
+}
+
+// 4. 다음 곡으로 이동
+function nextSong() {
+  songIndex++;
+  if (songIndex > songs.length - 1) songIndex = 0; // 마지막이면 첫 곡으로
+  loadSong(songs[songIndex]);
+  playMusic();
+}
+
+// 재생/일시정지 통합 제어
+function toggleMusic() {
+  if (music.paused) playMusic();
+  else pauseMusic();
+}
+
+function playMusic() {
+  music.play();
+  albumArt.classList.add("playing");
+  playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+}
+
+function pauseMusic() {
+  music.pause();
   albumArt.classList.remove("playing");
-  playBtn.innerText = "재생";
-});
+  playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+}
+music.addEventListener('ended', nextSong);
