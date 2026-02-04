@@ -12,13 +12,13 @@ window.addEventListener("scroll", function() {
     if (width <= 880) { 
         portfolioTime = 180;  
         iconsTime = 1500;     
-        aboutTime = 600;      
+        aboutTime = 1300;      
         projectsTime = 2500;
         contactTime = 4700;
     } else {
         portfolioTime = 600;  
         iconsTime = 2100;     
-        aboutTime = 1000;     
+        aboutTime = 1500;     
         projectsTime = 3900;  
         contactTime = 6700;
     }
