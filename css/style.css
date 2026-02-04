@@ -207,7 +207,8 @@ header {
   border: 1px solid rgb(0, 0, 0);
   background-color: rgb(27, 27, 27);
   border-radius: 10px;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   padding: 30px;
   box-shadow: 0px 0px 10px 3px #222;
@@ -272,7 +273,14 @@ header {
   pointer-events: none; /* 클릭 방해 금지 */
   opacity: 0.3;
 }
-
+.info-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* 세로 축 중앙 */
+  justify-content: center;
+  flex: 1;                /* 남은 공간을 유연하게 차지 */
+  min-width: 250px;       /* 너무 좁아지지 않게 방지 */
+}
 /* 재생 중일 때 둘 다 회전 */
 .playing {
   animation-play-state: running !important;
@@ -341,7 +349,7 @@ nav {
   height: 100%;
   position: absolute;
   top: 0px;
-  width: 200px;
+  width: 150px;
   border-radius: 50px;
   background-color: #333;
   z-index: 0;
@@ -352,16 +360,19 @@ nav {
                 background-color: 0.3s;
 }
 .slider.stretching {
-    width: 300px; 
+    width: 200px; 
     background-color: #444;
 }
 .pos-welcome {
-  right: calc(100% - 200px);
+  right: 450px;
 }
 .pos-about {
-  right: calc(50% - 100px);
+  right: 300px;
 }
 .pos-projects {
+  right: 155px;
+}
+.pos-contact {
   right: 0;
 }
 /* -------------------------------About-------------------------------------- */
@@ -564,6 +575,7 @@ aside h2 {
 }
 .box img {
   width: 35%;
+  max-width: 400px;
   height: auto;
   border: 2px solid #888; /* 메탈 느낌의 테두리 */
   box-shadow: 0px 0px 7px 7px #eee;
@@ -703,6 +715,42 @@ footer h2 {
 }
 .btn-group{
   gap: 8px;
+}
+@media (max-width: 880px) {
+  .music_ctrl {
+    flex-direction: column; /* 가로에서 세로 배치로 변경 */
+    gap: 20px;
+    padding: 20px;
+    scale: 1;  
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .album-wrapper {
+    width: 150px;          /* 이미지 크기를 살짝 줄임 */
+    height: 150px;
+  }
+
+
+  .album-wrapper::after {
+    width: 40px;
+    height: 40px;
+  }
+
+  .info-group {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .song-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .btn-group button {
+    width: 100px; 
+    font-size: 18px;
+  }
 }
 
   h1 {
